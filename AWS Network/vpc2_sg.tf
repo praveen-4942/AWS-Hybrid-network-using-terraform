@@ -4,8 +4,9 @@ resource "aws_security_group" "vpc2_ec2" {
   description = "Allow SSH and ICMP"
   vpc_id      = aws_vpc.vpc2.id
 
+  # SSH from your laptop
   ingress {
-    description = "SSH"
+    description = "SSH from my IP"
 
     from_port = 22
     to_port   = 22
@@ -14,16 +15,26 @@ resource "aws_security_group" "vpc2_ec2" {
     cidr_blocks = [var.allowed_ssh_cidr]
   }
 
+  # SSH from VPC1
   ingress {
-    description = "ICMP"
+    description = "SSH from VPC1"
+
+    from_port = 22
+    to_port   = 22
+    protocol  = "tcp"
+
+    cidr_blocks = ["10.10.0.0/16"]
+  }
+
+  # ICMP from VPC1
+  ingress {
+    description = "ICMP from VPC1"
 
     from_port = -1
     to_port   = -1
     protocol  = "icmp"
 
-    cidr_blocks = [
-      "10.10.0.0/16"
-    ]
+    cidr_blocks = ["10.10.0.0/16"]
   }
 
   egress {
