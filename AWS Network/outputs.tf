@@ -23,14 +23,3 @@ output "private_subnet_a_id" {
   value = aws_subnet.private_a.id
 }
 
-output "vpc2_id" {
-  value = aws_vpc.vpc2.id
-}
-
-output "vpc2_instance_private_ip" {
-  value = aws_instance.vpc2_ec2.private_ip
-}
-
-output "vpc_peering_id" {
-  value = aws_vpc_peering_connection.peer.id
-}
