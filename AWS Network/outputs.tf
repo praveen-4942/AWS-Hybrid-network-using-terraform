@@ -23,3 +23,12 @@ output "private_subnet_a_id" {
   value = aws_subnet.private_a.id
 }
 
+output "customer_gateway_public_ip" {
+
+  value = aws_instance.customer_gateway.public_ip
+}
+
+output "customer_gateway_private_ip" {
+
+  value = aws_instance.customer_gateway.private_ip
+}
