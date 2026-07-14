@@ -32,3 +32,13 @@ output "customer_gateway_private_ip" {
 
   value = aws_instance.customer_gateway.private_ip
 }
+
+output "vpc3_id" {
+
+  value = aws_vpc.vpc3.id
+}
+
+output "customer_gateway_public_ip" {
+
+  value = aws_instance.customer_gateway.public_ip
+}

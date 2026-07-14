@@ -2,7 +2,7 @@ resource "aws_security_group" "customer_gateway" {
 
   name        = "customer-gateway-sg"
   description = "Customer Gateway Security Group"
-  vpc_id      = aws_vpc.vpc2.id
+  vpc_id      = aws_vpc.vpc3.id
 
   # SSH from your public IP only
   ingress {

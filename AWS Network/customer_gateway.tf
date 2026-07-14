@@ -3,7 +3,7 @@ resource "aws_instance" "customer_gateway" {
   ami           = data.aws_ami.ubuntu_2204.id
   instance_type = var.instance_type
 
-  subnet_id = aws_subnet.vpc2_public.id
+  subnet_id = aws_subnet.vpc3_public.id
 
   associate_public_ip_address = true
 
