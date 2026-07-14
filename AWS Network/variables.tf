@@ -51,3 +51,4 @@ variable "allowed_ssh_cidr" {
   type        = string
   default     = "106.219.180.134/32"
 }
+
