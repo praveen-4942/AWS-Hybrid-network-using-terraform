@@ -51,6 +51,9 @@ resource "aws_vpn_connection" "site_to_site" {
 
   static_routes_only = true
 
+  local_ipv4_network_cidr  = "192.168.100.0/24"
+  remote_ipv4_network_cidr = "10.10.0.0/16"
+
   tags = merge(local.common_tags, {
     Name = "training-site-to-site-vpn"
   })

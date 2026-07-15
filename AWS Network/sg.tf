@@ -58,6 +58,25 @@ resource "aws_security_group" "private_ec2" {
     cidr_blocks = ["10.20.0.0/16"]
   }
 
+
+  # ICMP from On-Prem
+ingress {
+  description = "ICMP from On-Prem"
+  from_port   = -1
+  to_port     = -1
+  protocol    = "icmp"
+  cidr_blocks = ["192.168.100.0/24"]
+}
+
+# SSH from On-Prem
+ingress {
+  description = "SSH from On-Prem"
+  from_port   = 22
+  to_port     = 22
+  protocol    = "tcp"
+  cidr_blocks = ["192.168.100.0/24"]
+}
+
   egress {
     description = "Allow all outbound traffic"
     from_port   = 0
