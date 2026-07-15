@@ -4,6 +4,45 @@ resource "aws_security_group" "customer_gateway" {
   description = "Customer Gateway Security Group"
   vpc_id      = aws_vpc.vpc3.id
 
+  # Tunnel 1 - IKE
+ingress {
+  description = "IKE - Tunnel 1"
+  from_port   = 500
+  to_port     = 500
+  protocol    = "udp"
+  cidr_blocks = ["3.223.34.3/32"]
+}
+
+# Tunnel 1 - NAT-T
+ingress {
+  description = "NAT-T - Tunnel 1"
+  from_port   = 4500
+  to_port     = 4500
+  protocol    = "udp"
+  cidr_blocks = ["3.223.34.3/32"]
+}
+
+# Tunnel 2 - IKE
+ingress {
+  description = "IKE - Tunnel 2"
+  from_port   = 500
+  to_port     = 500
+  protocol    = "udp"
+  cidr_blocks = ["44.215.185.135/32"]
+}
+
+# Tunnel 2 - NAT-T
+ingress {
+  description = "NAT-T - Tunnel 2"
+  from_port   = 4500
+  to_port     = 4500
+  protocol    = "udp"
+  cidr_blocks = ["44.215.185.135/32"]
+}
+  
+  
+  
+  
   # SSH from your public IP only
   ingress {
 
@@ -44,3 +83,4 @@ resource "aws_security_group" "customer_gateway" {
     Name = "customer-gateway-sg"
   })
 }
+
