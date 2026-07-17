@@ -46,43 +46,8 @@ output "private_ec2_private_ip" {
   value       = aws_instance.private_ec2.private_ip
 }
 
-# ==========================================
-# Customer Gateway Outputs (VPC3)
-# ==========================================
 
-output "customer_gateway_instance_id" {
-  description = "Customer Gateway EC2 Instance ID"
-  value       = aws_instance.customer_gateway.id
-}
 
-output "customer_gateway_public_ip" {
-  description = "Customer Gateway Public IP"
-  value       = aws_instance.customer_gateway.public_ip
-}
-
-output "customer_gateway_private_ip" {
-  description = "Customer Gateway Private IP"
-  value       = aws_instance.customer_gateway.private_ip
-}
-
-# ==========================================
-# VPC3 Outputs
-# ==========================================
-
-output "vpc3_id" {
-  description = "VPC3 ID"
-  value       = aws_vpc.vpc3.id
-}
-
-output "vpc3_public_subnet_id" {
-  description = "VPC3 Public Subnet ID"
-  value       = aws_subnet.vpc3_public.id
-}
-
-output "vpc3_private_subnet_id" {
-  description = "VPC3 Private Subnet ID"
-  value       = aws_subnet.vpc3_private.id
-}
 
 #############################################
 # Transit Gateway Outputs

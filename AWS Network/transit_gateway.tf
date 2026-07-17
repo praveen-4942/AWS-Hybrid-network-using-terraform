@@ -21,7 +21,7 @@ resource "aws_ec2_transit_gateway" "tgw" {
 resource "aws_ec2_transit_gateway_vpc_attachment" "vpc1_attachment" {
 
   subnet_ids = [
-    aws_subnet.public_a.id,
+    aws_subnet.private_b.id,
     aws_subnet.private_a.id
   ]
 
