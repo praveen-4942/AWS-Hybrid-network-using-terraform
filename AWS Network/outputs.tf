@@ -83,3 +83,22 @@ output "vpc3_private_subnet_id" {
   description = "VPC3 Private Subnet ID"
   value       = aws_subnet.vpc3_private.id
 }
+
+#############################################
+# Transit Gateway Outputs
+#############################################
+
+output "transit_gateway_id" {
+  description = "Transit Gateway ID"
+  value       = aws_ec2_transit_gateway.tgw.id
+}
+
+output "vpc1_tgw_attachment_id" {
+  description = "VPC1 Transit Gateway Attachment ID"
+  value       = aws_ec2_transit_gateway_vpc_attachment.vpc1_attachment.id
+}
+
+output "vpc2_tgw_attachment_id" {
+  description = "VPC2 Transit Gateway Attachment ID"
+  value       = aws_ec2_transit_gateway_vpc_attachment.vpc2_attachment.id
+}

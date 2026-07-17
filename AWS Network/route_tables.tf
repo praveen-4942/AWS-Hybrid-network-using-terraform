@@ -43,3 +43,16 @@ resource "aws_route_table_association" "private_b" {
   subnet_id      = aws_subnet.private_b.id
   route_table_id = aws_route_table.private.id
 }
+
+#############################################
+# Route from VPC1 to VPC2 via Transit Gateway
+#############################################
+
+resource "aws_route" "vpc1_to_vpc2_tgw" {
+
+  route_table_id = aws_route_table.private.id
+
+  destination_cidr_block = aws_vpc.vpc2.cidr_block
+
+  transit_gateway_id = aws_ec2_transit_gateway.tgw.id
+}
