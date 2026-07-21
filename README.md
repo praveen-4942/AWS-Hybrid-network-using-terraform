@@ -127,6 +127,21 @@ AWS-Hybrid-network-using-terraform/
 ```
 
 ---
+## Outputs
+
+outputs/
+├── terraform-script.png
+├── configuring-strongswan-customer-gateway.png
+├── ec2-instances.png
+├── transit-gateway.png
+├── transit-gateway-attachment.png
+├── vpn-tunnel.png
+├── route-tables.png
+├── reachability-analyzer.png
+├── ping-vpc2.png
+├── log-analysis.png
+
+---
 
 ## Infrastructure Components
 
