@@ -275,10 +275,6 @@ screenshots/
 
 **DevSecOps Engineer**
 
-GitHub: https://github.com/<your-username>
-
-LinkedIn: https://linkedin.com/in/<your-profile>
-
 ---
 
 ## License
