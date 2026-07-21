@@ -128,7 +128,7 @@ AWS-Hybrid-network-using-terraform/
 
 ---
 ## Outputs
-
+```
 outputs/
 ├── terraform-script.png
 ├── configuring-strongswan-customer-gateway.png
@@ -140,7 +140,7 @@ outputs/
 ├── reachability-analyzer.png
 ├── ping-vpc2.png
 ├── log-analysis.png
-
+```
 ---
 
 ## Infrastructure Components
