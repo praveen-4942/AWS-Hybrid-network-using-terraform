@@ -9,29 +9,29 @@ This project simulates a real-world hybrid cloud environment by integrating mult
 ## Architecture
 
 ```
-                                        Internet
-                                            │
-                                    Internet Gateway
-                                            │
-                              ┌─────────────────────────┐
-                              │         VPC 1           │
-                              │                         │
-                              │  Public EC2            │
-                              │      │                 │
-                              │  NAT Gateway           │
-                              │      │                 │
-                              │  Private EC2           │
-                              └──────────┬─────────────┘
-                                         │
-                                  Transit Gateway
-                           ┌─────────────┼─────────────┐
-                           │                           │
-                     VPC Peering                  Site-to-Site VPN
-                           │                           │
-                    ┌──────┴──────┐           Customer Gateway
-                    │    VPC 2    │        (Ubuntu + StrongSwan)
-                    │ Shared VPC  │                 │
-                    └─────────────┘          On-Premises Network
+                   On-Premises Datacenter
+               (Ubuntu Router + LAN)
+
+         192.168.100.0/24
+                |
+       StrongSwan VPN Gateway
+                |
+           Internet
+                |
+        =====================
+                |
+         AWS Virtual Gateway
+                |
+        AWS Site-to-Site VPN
+                |
+       -------------------------
+       |                       |
+  VPC-A (App)             VPC-B (Shared)
+10.10.0.0/16             10.20.0.0/16
+       |                       |
+       |---- VPC Peering -------|
+               |
+         EC2 instances
 ```
 
 ---
