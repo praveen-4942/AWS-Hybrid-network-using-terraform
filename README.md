@@ -74,36 +74,56 @@ This project simulates a real-world hybrid cloud environment by integrating mult
 ## Repository Structure
 
 ```
-.
-├── customer_gateway.tf
-├── customer_gateway_sg.tf
-├── customer_gateway_userdata.sh
-├── data.tf
-├── ec2.tf
-├── ec2_vpc2.tf
-├── elastic_ip.tf
-├── igw.tf
-├── locals.tf
-├── nat_gateway.tf
-├── outputs.tf
-├── peering.tf
-├── provider.tf
-├── route_tables.tf
-├── sg.tf
-├── transit_gateway.tf
-├── variables.tf
-├── versions.tf
-├── vpc2.tf
-├── vpc2_route_tables.tf
-├── vpc2_sg.tf
-├── vpc3.tf
-├── vpc_subnets.tf
-├── vpn.tf
-├── vpn_outputs.tf
-├── vpn_routes.tf
-├── On premises/
+AWS-Hybrid-network-using-terraform/
+│
 ├── README.md
-└── .gitignore
+│
+├── Transit_Gateway/
+│   ├── customer_gateway.tf
+│   ├── customer_gateway_sg.tf
+│   ├── customer_gateway_userdata.sh
+│   ├── data.tf
+│   ├── ec2.tf
+│   ├── ec2_vpc2.tf
+│   ├── elastic_ip.tf
+│   ├── igw.tf
+│   ├── locals.tf
+│   ├── nat_gateway.tf
+│   ├── outputs.tf
+│   ├── provider.tf
+│   ├── route_tables.tf
+│   ├── sg.tf
+│   ├── transit_gateway.tf
+│   ├── variables.tf
+│   ├── versions.tf
+│   ├── vpc2.tf
+│   ├── vpc3.tf
+│   ├── vpc_subnets.tf
+│   ├── vpn.tf
+│   ├── vpn_outputs.tf
+│   └── vpn_routes.tf
+│
+└── VPC_Peering_Setup/
+    ├── customer_gateway.tf
+    ├── customer_gateway_sg.tf
+    ├── customer_gateway_userdata.sh
+    ├── data.tf
+    ├── ec2.tf
+    ├── ec2_vpc2.tf
+    ├── elastic_ip.tf
+    ├── igw.tf
+    ├── locals.tf
+    ├── nat_gateway.tf
+    ├── outputs.tf
+    ├── peering.tf
+    ├── provider.tf
+    ├── route_tables.tf
+    ├── sg.tf
+    ├── variables.tf
+    ├── versions.tf
+    ├── vpc2.tf
+    ├── vpc2_route_tables.tf
+    ├── vpc2_sg.tf
 ```
 
 ---
