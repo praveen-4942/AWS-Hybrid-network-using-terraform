@@ -238,22 +238,7 @@ Through this project, I gained hands-on experience with:
 - Add tfsec and Checkov Security Scanning
 - Multi-Region Deployment Support
 
----
 
-## Screenshots
-
-Add screenshots here after deployment.
-
-Example:
-
-```
-screenshots/
-├── architecture.png
-├── terraform-apply.png
-├── aws-console.png
-├── vpn-status.png
-└── route-tables.png
-```
 
 ---
 
