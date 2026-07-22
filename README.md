@@ -6,7 +6,7 @@ This project simulates a real-world hybrid cloud environment by integrating mult
 
 ---
 
-## Architecture
+## Architecture FLow
 
 ```
                    On-Premises Datacenter
@@ -33,7 +33,9 @@ This project simulates a real-world hybrid cloud environment by integrating mult
                |
          EC2 instances
 ```
-## Architecture
+---
+
+## Architecture Diagram
 
 <p align="center">
   <img src="outputs/Network_Architecture.png" alt="AWS Hybrid Network Architecture" width="100%">
