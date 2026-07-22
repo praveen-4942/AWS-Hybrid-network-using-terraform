@@ -33,7 +33,11 @@ This project simulates a real-world hybrid cloud environment by integrating mult
                |
          EC2 instances
 ```
+## Architecture
 
+<p align="center">
+  <img src="outputs/Network_Architecture.png" alt="AWS Hybrid Network Architecture" width="100%">
+</p>
 ---
 
 ## Features
